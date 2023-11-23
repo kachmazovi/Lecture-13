@@ -1,0 +1,53 @@
+header {
+  height: 100px;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  nav {
+    width: 700px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    ul {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: center;
+
+      a {
+        // @extend %header-styles;
+        @include container-text(30px, red);
+      }
+    }
+  }
+}
+
+main {
+  width: 1000px;
+  height: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+
+  .container {
+    @include main-container;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      @include container-text();
+    }
+
+    p {
+      @include container-text(15px, black);
+    }
+  }
+}
