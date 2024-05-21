@@ -1,0 +1,53 @@
+body {
+    @extend %my-container;
+
+    .index-header {
+        @include goFlex(row, space-between, center);
+        padding: 0 30px;
+
+        ul {
+            width: 400px;
+            @include goFlex(row, space-between, center);
+            padding: 5px 0;
+
+            li {
+                color: $primaryColor;
+                font-size: $primaryFontSize;
+            }
+        }
+    }
+
+    .index-main {
+        @include goFlex(row, space-between);
+        padding: 50px;
+
+        .index-left-side {
+            width: 20%;
+
+            h1 {
+                color: $secondaryColor;
+                font-size: $primaryFontSize;
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: $primaryColor;
+                font-size: $secondaryFontSize;
+            }
+        }
+
+        .index-right-side {
+            width: 70%;
+            border: 1px solid $secondaryColor;
+
+            @include goFlex(row, space-between);
+            gap: 20px;
+
+            .index-right-box {
+                width: 290px;
+                height: 320px;
+                border: 1px solid $secondaryColor;
+            }
+        }
+    }
+}
